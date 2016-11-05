@@ -2,7 +2,7 @@
 #produce a list of possible solutions to an anagram presented.
 
 def getDictionary():
-    return [w.lower().rstrip('\n') for w in open('dictfile.txt', 'r')]
+    return [w.lower().rstrip('\n') for w in open('dictionary.txt', 'r')]
 
 def solveSingleWord(anagram):
     ana = sorted(list(anagram.lower()), key=str.lower)
@@ -14,6 +14,7 @@ def solveSingleWord(anagram):
     return solutions
 
 def solveSingleWordA(anagram):
+    # shitty code to in this function
     # anagram = the current anagram being worked on
     # attempt = the word that is being matched against
     # prog = progress aginst current attempt
